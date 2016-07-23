@@ -1,0 +1,11 @@
+.app-toolbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #c94646
+}
+
+.app-toolbar-item {
+  padding: 15px;
+  cursor: pointer;
+}
