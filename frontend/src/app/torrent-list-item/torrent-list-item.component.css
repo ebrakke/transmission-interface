@@ -1,0 +1,10 @@
+.torrent-item {
+  display: flex;
+  flex-direction: row;
+  background-color: khaki;
+}
+
+.torrent-item-info {
+  padding: 15px;
+  border-right: solid 1px black;
+}

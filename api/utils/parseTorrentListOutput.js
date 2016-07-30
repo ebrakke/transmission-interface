@@ -1,17 +1,10 @@
 'use strict';
-const test = `ID     Done       Have  ETA           Up    Down  Ratio  Status       Name
-   1    58%   621.7 MB  Unknown      0.0     0.0    0.0  Stopped      ubuntu-14.04.4-desktop-amd64.iso
-   2    10%   621.7 MB  Unknown      0.0     0.0    0.0  Stopped      ubuntu-14.04.4-desktop-amd64.iso
-   3    23%   621.7 MB  Unknown      0.0     0.0    0.0  Stopped      ubuntu-14.04.4-desktop-amd64.iso
-   4    100%  621.7 MB  Unknown      0.0     0.0    0.0  Stopped      ubuntu-14.04.4-desktop-amd64.iso
-Sum:          621.7 MB               0.0     0.0`;
-
 /**
  * Parse the output of the transmission torrent list command
  * @param {String} rawOutput -- The output from the list command
  * @return {List}            -- The objectified torrent list
  */
-function parseTorrentList(rawOutput) {
+export function parseTorrentList(rawOutput) {
   let rawTorrentList = rawOutput.split(/\n/);
   let objectTorrentList = [];
   for (let i = 1; i < rawTorrentList.length - 1; i++) {
@@ -40,5 +33,3 @@ function convertLineToObject(line) {
 
   return rowObj;
 }
-
-console.log(parseTorrentList(test));

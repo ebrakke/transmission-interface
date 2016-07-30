@@ -1,12 +1,11 @@
 export class TorrentModel {
-  id: string;
+  id: number;
+  done: string;
+  have: string;
+  eta: string;
+  up: string;
+  down: string;
+  ratio: string;
+  status: string;
   name: string;
-  status: TorrentStatus;
-  location: string;
 }
-
-enum TorrentStatus {
-  NotStarted,
-  InProgress,
-  Complete
-};
